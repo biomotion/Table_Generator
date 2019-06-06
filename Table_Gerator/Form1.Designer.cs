@@ -57,14 +57,6 @@
             this.color_btn7 = new System.Windows.Forms.Button();
             this.color_btn8 = new System.Windows.Forms.Button();
             this.color_btn9 = new System.Windows.Forms.Button();
-            this.color_btn10 = new System.Windows.Forms.Button();
-            this.color_btn11 = new System.Windows.Forms.Button();
-            this.color_btn12 = new System.Windows.Forms.Button();
-            this.color_btn13 = new System.Windows.Forms.Button();
-            this.color_btn14 = new System.Windows.Forms.Button();
-            this.color_btn15 = new System.Windows.Forms.Button();
-            this.color_btn16 = new System.Windows.Forms.Button();
-            this.color_btn17 = new System.Windows.Forms.Button();
             this.color_btn18 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -83,7 +75,8 @@
             this.pictureBox1.Size = new System.Drawing.Size(587, 511);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_Draw);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_Draw);
             // 
             // tableLayoutPanel1
             // 
@@ -250,6 +243,7 @@
             this.pen_color_left.Size = new System.Drawing.Size(60, 23);
             this.pen_color_left.TabIndex = 1;
             this.pen_color_left.UseVisualStyleBackColor = false;
+            this.pen_color_left.Click += new System.EventHandler(this.pen_color_Click);
             // 
             // label3
             // 
@@ -270,6 +264,7 @@
             this.pen_color_right.Size = new System.Drawing.Size(60, 23);
             this.pen_color_right.TabIndex = 1;
             this.pen_color_right.UseVisualStyleBackColor = false;
+            this.pen_color_right.Click += new System.EventHandler(this.pen_color_Click);
             // 
             // flowLayoutPanel4
             // 
@@ -282,14 +277,6 @@
             this.flowLayoutPanel4.Controls.Add(this.color_btn7);
             this.flowLayoutPanel4.Controls.Add(this.color_btn8);
             this.flowLayoutPanel4.Controls.Add(this.color_btn9);
-            this.flowLayoutPanel4.Controls.Add(this.color_btn10);
-            this.flowLayoutPanel4.Controls.Add(this.color_btn11);
-            this.flowLayoutPanel4.Controls.Add(this.color_btn12);
-            this.flowLayoutPanel4.Controls.Add(this.color_btn13);
-            this.flowLayoutPanel4.Controls.Add(this.color_btn14);
-            this.flowLayoutPanel4.Controls.Add(this.color_btn15);
-            this.flowLayoutPanel4.Controls.Add(this.color_btn16);
-            this.flowLayoutPanel4.Controls.Add(this.color_btn17);
             this.flowLayoutPanel4.Controls.Add(this.color_btn18);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 192);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
@@ -386,91 +373,11 @@
             this.color_btn9.TabIndex = 1;
             this.color_btn9.UseVisualStyleBackColor = false;
             // 
-            // color_btn10
-            // 
-            this.color_btn10.BackColor = System.Drawing.Color.White;
-            this.color_btn10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.color_btn10.Location = new System.Drawing.Point(3, 32);
-            this.color_btn10.Name = "color_btn10";
-            this.color_btn10.Size = new System.Drawing.Size(23, 23);
-            this.color_btn10.TabIndex = 1;
-            this.color_btn10.UseVisualStyleBackColor = false;
-            // 
-            // color_btn11
-            // 
-            this.color_btn11.BackColor = System.Drawing.Color.White;
-            this.color_btn11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.color_btn11.Location = new System.Drawing.Point(32, 32);
-            this.color_btn11.Name = "color_btn11";
-            this.color_btn11.Size = new System.Drawing.Size(23, 23);
-            this.color_btn11.TabIndex = 1;
-            this.color_btn11.UseVisualStyleBackColor = false;
-            // 
-            // color_btn12
-            // 
-            this.color_btn12.BackColor = System.Drawing.Color.White;
-            this.color_btn12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.color_btn12.Location = new System.Drawing.Point(61, 32);
-            this.color_btn12.Name = "color_btn12";
-            this.color_btn12.Size = new System.Drawing.Size(23, 23);
-            this.color_btn12.TabIndex = 1;
-            this.color_btn12.UseVisualStyleBackColor = false;
-            // 
-            // color_btn13
-            // 
-            this.color_btn13.BackColor = System.Drawing.Color.White;
-            this.color_btn13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.color_btn13.Location = new System.Drawing.Point(90, 32);
-            this.color_btn13.Name = "color_btn13";
-            this.color_btn13.Size = new System.Drawing.Size(23, 23);
-            this.color_btn13.TabIndex = 1;
-            this.color_btn13.UseVisualStyleBackColor = false;
-            // 
-            // color_btn14
-            // 
-            this.color_btn14.BackColor = System.Drawing.Color.White;
-            this.color_btn14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.color_btn14.Location = new System.Drawing.Point(119, 32);
-            this.color_btn14.Name = "color_btn14";
-            this.color_btn14.Size = new System.Drawing.Size(23, 23);
-            this.color_btn14.TabIndex = 1;
-            this.color_btn14.UseVisualStyleBackColor = false;
-            // 
-            // color_btn15
-            // 
-            this.color_btn15.BackColor = System.Drawing.Color.White;
-            this.color_btn15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.color_btn15.Location = new System.Drawing.Point(148, 32);
-            this.color_btn15.Name = "color_btn15";
-            this.color_btn15.Size = new System.Drawing.Size(23, 23);
-            this.color_btn15.TabIndex = 1;
-            this.color_btn15.UseVisualStyleBackColor = false;
-            // 
-            // color_btn16
-            // 
-            this.color_btn16.BackColor = System.Drawing.Color.White;
-            this.color_btn16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.color_btn16.Location = new System.Drawing.Point(177, 32);
-            this.color_btn16.Name = "color_btn16";
-            this.color_btn16.Size = new System.Drawing.Size(23, 23);
-            this.color_btn16.TabIndex = 1;
-            this.color_btn16.UseVisualStyleBackColor = false;
-            // 
-            // color_btn17
-            // 
-            this.color_btn17.BackColor = System.Drawing.Color.White;
-            this.color_btn17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.color_btn17.Location = new System.Drawing.Point(206, 32);
-            this.color_btn17.Name = "color_btn17";
-            this.color_btn17.Size = new System.Drawing.Size(23, 23);
-            this.color_btn17.TabIndex = 1;
-            this.color_btn17.UseVisualStyleBackColor = false;
-            // 
             // color_btn18
             // 
             this.color_btn18.BackColor = System.Drawing.Color.White;
             this.color_btn18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.color_btn18.Location = new System.Drawing.Point(235, 32);
+            this.color_btn18.Location = new System.Drawing.Point(3, 32);
             this.color_btn18.Name = "color_btn18";
             this.color_btn18.Size = new System.Drawing.Size(23, 23);
             this.color_btn18.TabIndex = 1;
@@ -487,7 +394,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
             this.Text = "Table Generator";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -521,6 +427,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button pen_color_left;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button pen_color_right;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Button color_btn1;
         private System.Windows.Forms.Button color_btn2;
@@ -531,16 +438,7 @@
         private System.Windows.Forms.Button color_btn7;
         private System.Windows.Forms.Button color_btn8;
         private System.Windows.Forms.Button color_btn9;
-        private System.Windows.Forms.Button color_btn10;
-        private System.Windows.Forms.Button color_btn11;
-        private System.Windows.Forms.Button color_btn12;
-        private System.Windows.Forms.Button color_btn13;
-        private System.Windows.Forms.Button color_btn14;
-        private System.Windows.Forms.Button color_btn15;
-        private System.Windows.Forms.Button color_btn16;
-        private System.Windows.Forms.Button color_btn17;
         private System.Windows.Forms.Button color_btn18;
-        private System.Windows.Forms.Button pen_color_right;
     }
 }
 

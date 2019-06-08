@@ -1,6 +1,6 @@
 ﻿namespace Table_Gerator
 {
-    partial class MainForm
+    partial class clearButton
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clearButton));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -58,12 +58,18 @@
             this.color_btn8 = new System.Windows.Forms.Button();
             this.color_btn9 = new System.Windows.Forms.Button();
             this.color_btn18 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.ImportButton = new System.Windows.Forms.Button();
+            this.exportButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.fileButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -88,6 +94,9 @@
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.fileButton, 0, 5);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 14);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -292,6 +301,7 @@
             this.color_btn1.Size = new System.Drawing.Size(23, 23);
             this.color_btn1.TabIndex = 1;
             this.color_btn1.UseVisualStyleBackColor = false;
+            this.color_btn1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.color_btns_MouseClick);
             // 
             // color_btn2
             // 
@@ -302,6 +312,7 @@
             this.color_btn2.Size = new System.Drawing.Size(23, 23);
             this.color_btn2.TabIndex = 1;
             this.color_btn2.UseVisualStyleBackColor = false;
+            this.color_btn2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.color_btns_MouseClick);
             // 
             // color_btn3
             // 
@@ -312,6 +323,7 @@
             this.color_btn3.Size = new System.Drawing.Size(23, 23);
             this.color_btn3.TabIndex = 1;
             this.color_btn3.UseVisualStyleBackColor = false;
+            this.color_btn3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.color_btns_MouseClick);
             // 
             // color_btn4
             // 
@@ -322,6 +334,7 @@
             this.color_btn4.Size = new System.Drawing.Size(23, 23);
             this.color_btn4.TabIndex = 1;
             this.color_btn4.UseVisualStyleBackColor = false;
+            this.color_btn4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.color_btns_MouseClick);
             // 
             // color_btn5
             // 
@@ -332,6 +345,7 @@
             this.color_btn5.Size = new System.Drawing.Size(23, 23);
             this.color_btn5.TabIndex = 1;
             this.color_btn5.UseVisualStyleBackColor = false;
+            this.color_btn5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.color_btns_MouseClick);
             // 
             // color_btn6
             // 
@@ -342,6 +356,7 @@
             this.color_btn6.Size = new System.Drawing.Size(23, 23);
             this.color_btn6.TabIndex = 1;
             this.color_btn6.UseVisualStyleBackColor = false;
+            this.color_btn6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.color_btns_MouseClick);
             // 
             // color_btn7
             // 
@@ -352,6 +367,7 @@
             this.color_btn7.Size = new System.Drawing.Size(23, 23);
             this.color_btn7.TabIndex = 1;
             this.color_btn7.UseVisualStyleBackColor = false;
+            this.color_btn7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.color_btns_MouseClick);
             // 
             // color_btn8
             // 
@@ -362,6 +378,7 @@
             this.color_btn8.Size = new System.Drawing.Size(23, 23);
             this.color_btn8.TabIndex = 1;
             this.color_btn8.UseVisualStyleBackColor = false;
+            this.color_btn8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.color_btns_MouseClick);
             // 
             // color_btn9
             // 
@@ -372,6 +389,7 @@
             this.color_btn9.Size = new System.Drawing.Size(23, 23);
             this.color_btn9.TabIndex = 1;
             this.color_btn9.UseVisualStyleBackColor = false;
+            this.color_btn9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.color_btns_MouseClick);
             // 
             // color_btn18
             // 
@@ -382,17 +400,74 @@
             this.color_btn18.Size = new System.Drawing.Size(23, 23);
             this.color_btn18.TabIndex = 1;
             this.color_btn18.UseVisualStyleBackColor = false;
+            this.color_btn18.MouseClick += new System.Windows.Forms.MouseEventHandler(this.color_btns_MouseClick);
             // 
-            // MainForm
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.ImportButton, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.exportButton, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 381);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(276, 57);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // ImportButton
+            // 
+            this.ImportButton.Enabled = false;
+            this.ImportButton.Location = new System.Drawing.Point(3, 3);
+            this.ImportButton.Name = "ImportButton";
+            this.ImportButton.Size = new System.Drawing.Size(132, 51);
+            this.ImportButton.TabIndex = 0;
+            this.ImportButton.Text = "IMPORT FROM CLIPBOARD";
+            this.ImportButton.UseVisualStyleBackColor = true;
+            this.ImportButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ImportButton_MouseClick);
+            // 
+            // exportButton
+            // 
+            this.exportButton.Location = new System.Drawing.Point(141, 3);
+            this.exportButton.Name = "exportButton";
+            this.exportButton.Size = new System.Drawing.Size(132, 51);
+            this.exportButton.TabIndex = 1;
+            this.exportButton.Text = "EXPORT TO CLIPBOARD";
+            this.exportButton.UseVisualStyleBackColor = true;
+            this.exportButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.exportButton_MouseClick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 444);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(276, 64);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "CLEAR";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
+            // 
+            // fileButton
+            // 
+            this.fileButton.Enabled = false;
+            this.fileButton.Location = new System.Drawing.Point(3, 318);
+            this.fileButton.Name = "fileButton";
+            this.fileButton.Size = new System.Drawing.Size(273, 57);
+            this.fileButton.TabIndex = 3;
+            this.fileButton.Text = "READ FILE";
+            this.fileButton.UseVisualStyleBackColor = true;
+            this.fileButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.fileButton_MouseClick);
+            // 
+            // clearButton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 540);
+            this.ClientSize = new System.Drawing.Size(900, 556);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "MainForm";
+            this.Name = "clearButton";
             this.Text = "Table Generator";
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -404,6 +479,7 @@
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
             this.flowLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -439,6 +515,11 @@
         private System.Windows.Forms.Button color_btn8;
         private System.Windows.Forms.Button color_btn9;
         private System.Windows.Forms.Button color_btn18;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button ImportButton;
+        private System.Windows.Forms.Button exportButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button fileButton;
     }
 }
 
